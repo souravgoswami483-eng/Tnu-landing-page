@@ -81,6 +81,13 @@ img { max-width: 100%; height: auto; display: block; }
 .btn-submit:hover { background: var(--tnu-red-hover); box-shadow: 0 6px 20px var(--accent-glow); }
 .form-footer { text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 15px; }
 
+/* ========== VALIDATION STYLES ========== */
+.form-group { position: relative; }
+.form-control.error { border-color: #ef4444 !important; background: #fef2f2 !important; }
+.error-message { color: #ef4444; font-size: 0.75rem; margin-top: 4px; display: none; margin-left: 2px; }
+.form-group.has-error .error-message { display: block; }
+.form-group.has-error input, .form-group.has-error select { border-color: #ef4444; background: #fef2f2; }
+
 /* ========== AFFILIATION & ACCREDITATION ========== */
 .accreditation-section { padding: 40px 0; background: #fff; border-bottom: 1px solid var(--glass-border); }
 .acc-grid { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; }
@@ -196,6 +203,65 @@ details[open] summary:after { transform: rotate(180deg); }
 .social-links a { width: 40px; height: 40px; background: #e2e8f0; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; color: var(--text-dark); }
 .social-links a:hover { background: var(--tnu-red); color: #fff; transform: translateY(-3px); }
 .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #e2e8f0; color: var(--text-muted); font-size: 0.9rem; }
+
+/* ========== POPUP MODAL ========== */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.4s ease;
+}
+
+.popup-overlay.active { display: flex; }
+
+.popup-content {
+    background: #fff;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    padding: 40px 30px;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.popup-overlay.active .popup-content { transform: translateY(0); }
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f1f5f9;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+.popup-close:hover { background: var(--tnu-red); color: #fff; }
+
+.popup-header { text-align: center; margin-bottom: 25px; }
+.popup-header h3 { font-size: 1.8rem; color: #111827; margin-bottom: 8px; }
+.popup-header p { color: var(--text-muted); font-size: 0.95rem; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 /* ========== ANIMATION CLASSES ========== */
 .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }

@@ -456,7 +456,7 @@
                 <h4>Contact Us</h4>
                 <p><i class="fas fa-map-marker-alt"></i> <strong>Campus:</strong> Sarisha, Diamond Harbour Road, 24 Parganas (S), West Bengal - 743368</p>
                 <p><i class="fas fa-building"></i> <strong>Head Office:</strong> Vishwakarma, 86C Topsia Road (S), Kolkata - 700046</p>
-                <p><i class="fas fa-phone-alt"></i> +91 70444 46888 / +91 70444 46999</p>
+                <p><i class="fas fa-phone-alt"></i> +91 76056 56342</p>
                 <p><i class="fas fa-envelope"></i> contact@tnu.in</p>
             </div>
         </div>
@@ -464,6 +464,37 @@
             <p>&copy; 2026 The Neotia University. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Popup Modal Form -->
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" id="closePopup">&times;</button>
+            <div class="popup-header">
+                <h3>Quick Inquiry</h3>
+                <p>Have questions? Reach out to us and we'll get back to you shortly.</p>
+            </div>
+            <form id="popupInquiryForm" class="popup-form">
+                <div class="form-group">
+                    <input type="text" id="popupName" name="name" placeholder="Full Name *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="popupPhone" name="phone" placeholder="Mobile Number *" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="popupEmail" name="email" placeholder="Email Address *" required>
+                </div>
+                <div class="form-group">
+                    <select id="popupCourse" name="course" required>
+                        <option value="" disabled selected>Select Specialization *</option>
+                        <option value="bdes-gdav">B.Des (GDAV)</option>
+                        <option value="bdes-fd">B.Des (FD)</option>
+                        <option value="bsc-mjmt">B.Sc - Multimedia & Media Tech</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Send Inquiry <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
 
     <!-- Custom JS -->
     <script src="script.js"></script>
