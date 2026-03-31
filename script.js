@@ -229,6 +229,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 60000);
 
+        // Show popup on all "Apply Now" buttons
+        const applyBtns = document.querySelectorAll('a[href="#apply"]');
+        applyBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                popupOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
         const closePopupAction = () => {
             popupOverlay.classList.remove('active');
             document.body.style.overflow = 'auto';
