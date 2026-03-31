@@ -5,15 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
 
+    let scrollTimeout;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.05)';
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        } else {
-            navbar.style.boxShadow = 'none';
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        if (!scrollTimeout) {
+            scrollTimeout = setTimeout(() => {
+                if (window.scrollY > 50) {
+                    navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.05)';
+                    navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    navbar.style.boxShadow = 'none';
+                    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                }
+                scrollTimeout = null;
+            }, 100);
         }
-    });
+    }, { passive: true });
 
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');

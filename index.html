@@ -8,8 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome for Icons (Asynchronous load) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- Preload LCP and critical assets -->
+    <link rel="preload" as="image" href="https://www.tnu.in/wp-content/uploads/2023/05/tnu-logo-v2-1.jpg">
+    <link rel="preload" as="image" href="indian-hero-new.png">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -43,7 +46,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg">
-            <video autoplay muted loop playsinline id="heroVideo">
+            <video autoplay muted loop playsinline id="heroVideo" poster="indian-hero-new.png">
                 <source src="banner-video.mp4" type="video/mp4">
             </video>
         </div>
@@ -159,7 +162,7 @@
             
             <div class="overview-wrapper">
                 <div class="overview-image reveal">
-                    <img src="indian-lab.png" alt="Indian Design Student in Lab">
+                    <img src="indian-lab.png" alt="Indian Design Student in Lab" loading="lazy">
                 </div>
                 
                 <div class="overview-grid">
@@ -198,23 +201,23 @@
         <div class="marquee-container reveal">
             <div class="marquee-content">
                 <!-- Tech Icons -->
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="After Effects"><span>After Effects</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender"><span>Blender</span></div>
-                <div class="tech-card"><img src="maya-logo.png" alt="Maya"><span>Maya</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator"><span>Illustrator</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop"><span>Photoshop</span></div>
-                <div class="tech-card"><img src="animate-logo.png" alt="Animate"><span>Animate</span></div>
-                <div class="tech-card"><img src="midjourney-logo.png" alt="Midjourney"><span>Midjourney AI</span></div>
+                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="After Effects" loading="lazy"><span>After Effects</span></div>
+                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender" loading="lazy"><span>Blender</span></div>
+                <div class="tech-card"><img src="maya-logo.png" alt="Maya" loading="lazy"><span>Maya</span></div>
+                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" loading="lazy"><span>Illustrator</span></div>
+                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" loading="lazy"><span>Photoshop</span></div>
+                <div class="tech-card"><img src="animate-logo.png" alt="Animate" loading="lazy"><span>Animate</span></div>
+                <div class="tech-card"><img src="midjourney-logo.png" alt="Midjourney" loading="lazy"><span>Midjourney AI</span></div>
                 <div class="tech-card"><i class="fas fa-tasks" style="font-size: 2.5rem; color: #212529;"></i><span style="margin-top: 10px;">Asana</span></div>
                 
                 <!-- Duplicate for infinite scroll -->
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="After Effects"><span>After Effects</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender"><span>Blender</span></div>
-                <div class="tech-card"><img src="maya-logo.png" alt="Maya"><span>Maya</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator"><span>Illustrator</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop"><span>Photoshop</span></div>
-                <div class="tech-card"><img src="animate-logo.png" alt="Animate"><span>Animate</span></div>
-                <div class="tech-card"><img src="midjourney-logo.png" alt="Midjourney"><span>Midjourney AI</span></div>
+                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="After Effects" loading="lazy"><span>After Effects</span></div>
+                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender" loading="lazy"><span>Blender</span></div>
+                <div class="tech-card"><img src="maya-logo.png" alt="Maya" loading="lazy"><span>Maya</span></div>
+                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" loading="lazy"><span>Illustrator</span></div>
+                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" loading="lazy"><span>Photoshop</span></div>
+                <div class="tech-card"><img src="animate-logo.png" alt="Animate" loading="lazy"><span>Animate</span></div>
+                <div class="tech-card"><img src="midjourney-logo.png" alt="Midjourney" loading="lazy"><span>Midjourney AI</span></div>
                 <div class="tech-card"><i class="fas fa-tasks" style="font-size: 2.5rem; color: #212529;"></i><span style="margin-top: 10px;">Asana</span></div>
             </div>
         </div>
@@ -234,7 +237,7 @@
                     </div>
                 </div>
                 <div class="mid-cta-image">
-                    <img src="students-cta.png" alt="Happy College Students at TNU">
+                    <img src="students-cta.png" alt="Happy College Students at TNU" loading="lazy">
                 </div>
             </div>
         </div>
@@ -317,7 +320,7 @@
 
             <div class="placement-wrapper">
                 <div class="placement-left reveal">
-                    <img src="indian-professionals.png" alt="Placements at TNU" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); width: 100%;">
+                    <img src="indian-professionals.png" alt="Placements at TNU" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); width: 100%;" loading="lazy">
                 </div>
 
                 <div class="placement-right reveal delay-1">
@@ -354,14 +357,14 @@
                 <div class="mentors-box reveal">
                     <h3>Course Mentors</h3>
                     <div class="mentor-item">
-                        <div class="mentor-avatar"><img src="mentor-mrityunjoy.jpg" alt="Prof. (Dr.) Mrityunjoy Chatterjee"></div>
+                        <div class="mentor-avatar"><img src="mentor-mrityunjoy.jpg" alt="Prof. (Dr.) Mrityunjoy Chatterjee" loading="lazy"></div>
                         <div class="mentor-info">
                             <h4>Prof. (Dr.) Mrityunjoy Chatterjee</h4>
                             <p>Noted journalist turned academic administrator. Decades in Print, News Agency, Radio & Television.</p>
                         </div>
                     </div>
                     <div class="mentor-item mt-4">
-                        <div class="mentor-avatar"><img src="mentor-subrata.jpg" alt="Subrata Roy"></div>
+                        <div class="mentor-avatar"><img src="mentor-subrata.jpg" alt="Subrata Roy" loading="lazy"></div>
                         <div class="mentor-info">
                             <h4>Subrata Roy</h4>
                             <p>Founder, Hi-tech Animation & Tutopia. 25 years of experience in the animation industry.</p>
@@ -419,7 +422,7 @@
                 </div>
                 
                 <div class="campus-image reveal delay-1">
-                    <img src="indian-campus.png" alt="TNU Indian Campus" style="width: 100%; height: auto; object-fit: cover;">
+                    <img src="indian-campus.png" alt="TNU Indian Campus" style="width: 100%; height: auto; object-fit: cover;" loading="lazy">
                 </div>
             </div>
         </div>
@@ -478,7 +481,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col">
-                <img src="https://www.tnu.in/wp-content/uploads/2023/05/tnu-logo-v2-1.jpg" alt="TNU Logo" class="footer-logo">
+                <img src="https://www.tnu.in/wp-content/uploads/2023/05/tnu-logo-v2-1.jpg" alt="TNU Logo" class="footer-logo" loading="lazy">
                 <p>Approved Under Sec. 2(f) of UGC Act 1956</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -531,6 +534,6 @@
     </div>
 
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
