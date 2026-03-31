@@ -42,13 +42,17 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="banner-video.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="container hero-container">
             <div class="hero-content fade-in-up">
                 <span class="badge">UGC Approved • Department of New Media & Design</span>
                 <h1 class="hero-title">
                     Bachelor of Design (B.Des) 
-                    <span class="highlight">Graphic Design, Animation & VFX with AI</span> | Fashion Design
+                    <span class="highlight">Graphic Design, Animation & VFX with AI</span>
                 </h1>
                 <p class="hero-subtitle">
                     Master industry-standard tools, emerging AI-driven creative workflows, and aesthetic competencies through hands-on studio projects.
@@ -105,9 +109,13 @@
     <section class="accreditation-section reveal">
         <div class="container acc-grid">
             <div class="acc-item"><i class="fas fa-university"></i> UGC Recognized</div>
+            <span class="acc-divider">|</span>
             <div class="acc-item"><i class="fas fa-balance-scale"></i> BCI Approved</div>
+            <span class="acc-divider">|</span>
             <div class="acc-item"><i class="fas fa-pills"></i> PCI Approved</div>
+            <span class="acc-divider">|</span>
             <div class="acc-item"><i class="fas fa-user-nurse"></i> INC Recognized</div>
+            <span class="acc-divider">|</span>
             <div class="acc-item"><i class="fas fa-certificate"></i> ISO 9001:2015 Certified</div>
         </div>
     </section>
@@ -155,6 +163,13 @@
                 </div>
                 
                 <div class="overview-grid">
+                    <div class="overview-card reveal">
+                        <div class="card-icon"><i class="fas fa-industry"></i></div>
+                        <div class="card-content">
+                            <h3>Industry-Integrated Learning</h3>
+                            <p>Direct exposure to professional workflows through studio-based projects and mandatory industry internships.</p>
+                        </div>
+                    </div>
                     <div class="overview-card reveal delay-1">
                         <div class="card-icon"><i class="fas fa-palette"></i></div>
                         <div class="card-content">
@@ -185,22 +200,42 @@
                 <!-- Tech Icons -->
                 <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="After Effects"><span>After Effects</span></div>
                 <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender"><span>Blender</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Autodesk_Maya_2013_logo.png" alt="Maya"><span>Maya</span></div>
+                <div class="tech-card"><img src="maya-logo.png" alt="Maya"><span>Maya</span></div>
                 <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator"><span>Illustrator</span></div>
                 <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop"><span>Photoshop</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_Animate_CC_icon_%282020%29.svg" alt="Animate"><span>Animate</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Midjourney_Emblem.png" alt="Midjourney"><span>Midjourney AI</span></div>
+                <div class="tech-card"><img src="animate-logo.png" alt="Animate"><span>Animate</span></div>
+                <div class="tech-card"><img src="midjourney-logo.png" alt="Midjourney"><span>Midjourney AI</span></div>
                 <div class="tech-card"><i class="fas fa-tasks" style="font-size: 2.5rem; color: #212529;"></i><span style="margin-top: 10px;">Asana</span></div>
                 
                 <!-- Duplicate for infinite scroll -->
                 <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="After Effects"><span>After Effects</span></div>
                 <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender"><span>Blender</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Autodesk_Maya_2013_logo.png" alt="Maya"><span>Maya</span></div>
+                <div class="tech-card"><img src="maya-logo.png" alt="Maya"><span>Maya</span></div>
                 <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator"><span>Illustrator</span></div>
                 <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop"><span>Photoshop</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_Animate_CC_icon_%282020%29.svg" alt="Animate"><span>Animate</span></div>
-                <div class="tech-card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Midjourney_Emblem.png" alt="Midjourney"><span>Midjourney AI</span></div>
+                <div class="tech-card"><img src="animate-logo.png" alt="Animate"><span>Animate</span></div>
+                <div class="tech-card"><img src="midjourney-logo.png" alt="Midjourney"><span>Midjourney AI</span></div>
                 <div class="tech-card"><i class="fas fa-tasks" style="font-size: 2.5rem; color: #212529;"></i><span style="margin-top: 10px;">Asana</span></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mid-Page CTA: Admission Open -->
+    <section class="section mid-cta-section reveal">
+        <div class="container">
+            <div class="mid-cta-wrapper">
+                <div class="mid-cta-content">
+                    <span class="badge">Session 2026-27</span>
+                    <h2>Admission Open For Session 2027</h2>
+                    <p>Start your journey in the world of Design, Animation, and VFX with AI. Limited seats available for the 2026 intake.</p>
+                    <div class="cta-btns">
+                        <a href="#apply" class="btn btn-primary">Apply Now For Free</a>
+                        <a href="tel:+917605656342" class="btn btn-white" style="border: 1px solid var(--tnu-red);"><i class="fas fa-phone-alt"></i> Talk to Expert</a>
+                    </div>
+                </div>
+                <div class="mid-cta-image">
+                    <img src="students-cta.png" alt="Happy College Students at TNU">
+                </div>
             </div>
         </div>
     </section>
@@ -243,7 +278,7 @@
                     <div class="role-icon"><i class="fas fa-bullhorn"></i></div>
                     <h4>Creative Director <br><small>(Junior Level)</small></h4>
                 </div>
-                <div class="role-card reveal glow-card">
+                <div class="role-card reveal">
                     <div class="role-icon"><i class="fas fa-microchip"></i></div>
                     <h4>Generative AI Design Expert</h4>
                 </div>
@@ -319,17 +354,17 @@
                 <div class="mentors-box reveal">
                     <h3>Course Mentors</h3>
                     <div class="mentor-item">
-                        <div class="mentor-avatar"><i class="fas fa-user-circle"></i></div>
-                        <div class="mentor-info">
-                            <h4>Mr. Subrata Roy</h4>
-                            <p>Founder, Hi-tech Animation & Tutopia. 25 years of experience in the animation industry.</p>
-                        </div>
-                    </div>
-                    <div class="mentor-item mt-4">
-                        <div class="mentor-avatar"><i class="fas fa-user-circle"></i></div>
+                        <div class="mentor-avatar"><img src="mentor-mrityunjoy.jpg" alt="Prof. (Dr.) Mrityunjoy Chatterjee"></div>
                         <div class="mentor-info">
                             <h4>Prof. (Dr.) Mrityunjoy Chatterjee</h4>
                             <p>Noted journalist turned academic administrator. Decades in Print, News Agency, Radio & Television.</p>
+                        </div>
+                    </div>
+                    <div class="mentor-item mt-4">
+                        <div class="mentor-avatar"><img src="mentor-subrata.jpg" alt="Subrata Roy"></div>
+                        <div class="mentor-info">
+                            <h4>Subrata Roy</h4>
+                            <p>Founder, Hi-tech Animation & Tutopia. 25 years of experience in the animation industry.</p>
                         </div>
                     </div>
                 </div>
@@ -455,7 +490,6 @@
             <div class="footer-col">
                 <h4>Contact Us</h4>
                 <p><i class="fas fa-map-marker-alt"></i> <strong>Campus:</strong> Sarisha, Diamond Harbour Road, 24 Parganas (S), West Bengal - 743368</p>
-                <p><i class="fas fa-building"></i> <strong>Head Office:</strong> Vishwakarma, 86C Topsia Road (S), Kolkata - 700046</p>
                 <p><i class="fas fa-phone-alt"></i> +91 76056 56342</p>
                 <p><i class="fas fa-envelope"></i> contact@tnu.in</p>
             </div>
