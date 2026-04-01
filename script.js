@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const forms = [
         { id: 'admissionForm', fields: ['name', 'email', 'phone', 'course', 'city'] },
-        { id: 'popupInquiryForm', fields: ['popupName', 'popupEmail', 'popupPhone', 'popupCourse'] }
+        { id: 'popupInquiryForm', fields: ['popupName', 'popupEmail', 'popupPhone', 'popupCourse'] },
+        { id: 'leadCaptureForm', fields: ['leadName', 'leadEmail', 'leadPhone', 'leadCity'] }
     ];
 
     // Helper to show/hide errors

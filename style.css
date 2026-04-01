@@ -187,6 +187,15 @@ img { max-width: 100%; height: auto; display: block; }
 .role-card h4 { font-size: 1.1rem; font-weight: 600; color: #111827; }
 .role-card small { color: var(--text-muted); }
 
+/* ========== PROSPECTS SECTION ========== */
+.prospects-section { background-color: var(--bg-light); border-bottom: 1px solid var(--glass-border); }
+.prospects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+.prospect-card { background: #fff; border: 1px solid var(--glass-border); padding: 40px 30px; border-radius: 16px; text-align: center; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 10px 30px rgba(0,0,0,0.03); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
+.prospect-card:hover { transform: translateY(-10px); border-color: var(--tnu-red); box-shadow: 0 20px 40px rgba(182, 49, 54, 0.1); }
+.prospect-icon { width: 60px; height: 60px; background: rgba(182, 49, 54, 0.05); color: var(--tnu-red); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; transition: 0.3s; }
+.prospect-card:hover .prospect-icon { background: var(--tnu-red); color: #fff; transform: rotate(10deg); }
+.prospect-card h4 { font-size: 1.25rem; font-weight: 700; color: #111827; line-height: 1.4; }
+
 /* ========== CAREER & PLACEMENTS ========== */
 .placements-section { background-color: #fff; content-visibility: auto; contain-intrinsic-size: 1px 800px; }
 .placement-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
@@ -239,10 +248,32 @@ summary:after { content: '\f0d7'; font-family: 'Font Awesome 6 Free'; font-weigh
 details[open] summary:after { transform: rotate(180deg); }
 .faq-content { padding: 0 20px 20px 20px; color: var(--text-muted); border-top: 1px solid var(--glass-border); margin-top: 10px; padding-top: 15px; }
 
-/* ========== CTA BANNER ========== */
-.cta-banner { background: linear-gradient(135deg, var(--tnu-red), #e63946); padding: 70px 0; color: #fff; text-align: center; }
-.cta-banner h2 { color: #fff; font-size: 2.5rem; margin-bottom: 20px; }
 .cta-banner p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
+
+/* ========== LEAD CAPTURE SECTION ========== */
+.lead-capture-section { background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('indian-campus.png'); background-attachment: fixed; background-size: cover; background-position: center; padding: 100px 0; border-top: 1px solid var(--glass-border); }
+.lead-capture-wrapper { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+.lead-content h2 { font-size: 3rem; font-weight: 900; margin-bottom: 25px; color: #111827; line-height: 1.2; }
+.lead-content p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px; }
+.trust-badges { display: flex; gap: 30px; }
+.t-badge { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-dark); }
+.t-badge i { color: #10b981; font-size: 1.2rem; }
+
+.lead-form-box { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 1); padding: 50px; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.capture-form .form-group { margin-bottom: 0; }
+.capture-form .btn-submit { margin-top: 10px; font-weight: 700; height: 60px; }
+
+@media (max-width: 992px) {
+    .lead-capture-wrapper { grid-template-columns: 1fr; text-align: center; }
+    .trust-badges { justify-content: center; }
+    .lead-content h2 { font-size: 2.4rem; }
+}
+@media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; gap: 15px; }
+    .lead-form-box { padding: 30px 20px; }
+    .lead-content h2 { font-size: 2rem; }
+}
 
 /* ========== FOOTER ========== */
 .footer { background-color: #f8fafc; padding: 60px 0 20px; border-top: 4px solid var(--tnu-red); }
