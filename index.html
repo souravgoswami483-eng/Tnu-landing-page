@@ -97,8 +97,8 @@
                     </div>
                     <div class="form-group">
                         <select id="course" name="course" required>
-                            <option value="" disabled selected>Select Specialization *</option>
-                            <option value="bdes-gdav">B.Des (GDAV) - Graphic Design, Animation, VFX with AI</option>
+                            <option value="" disabled>Select Specialization *</option>
+                            <option value="bdes-gdav" selected>B.Des (GDAV) - Graphic Design, Animation, VFX with AI</option>
                             <option value="bdes-fd">B.Des (FD) - Fashion Design</option>
                             <option value="bsc-mjmt">B.Sc - Multimedia Journalism & Media Tech with AI</option>
                         </select>
@@ -509,31 +509,34 @@
     <!-- Popup Modal Form -->
     <div id="popupOverlay" class="popup-overlay">
         <div class="popup-content">
-            <button class="popup-close" id="closePopup">&times;</button>
-            <div class="popup-header">
-                <h3>Quick Inquiry</h3>
-                <p>Have questions? Reach out to us and we'll get back to you shortly.</p>
+            <button class="popup-close" id="closePopup" aria-label="Close Popup">&times;</button>
+            <div class="popup-header-banner">
+                <h3>Admission Open 2026-27</h3>
+                <p>Have Questions? Reach out to us and we'll get back to you shortly</p>
             </div>
-            <form id="popupInquiryForm" class="popup-form">
-                <div class="form-group">
-                    <input type="text" id="popupName" name="name" placeholder="Full Name *" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="popupPhone" name="phone" placeholder="Mobile Number *" maxlength="10" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="popupEmail" name="email" placeholder="Email Address *" required>
-                </div>
-                <div class="form-group">
-                    <select id="popupCourse" name="course" required>
-                        <option value="" disabled selected>Select Specialization *</option>
-                        <option value="bdes-gdav">B.Des (GDAV)</option>
-                        <option value="bdes-fd">B.Des (FD)</option>
-                        <option value="bsc-mjmt">B.Sc - Multimedia & Media Tech</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-submit">Send Inquiry <i class="fas fa-paper-plane"></i></button>
-            </form>
+            <div class="popup-body">
+                <h2 class="popup-title">ENQUIRE NOW</h2>
+                <form id="popupInquiryForm" class="popup-form">
+                    <div class="form-group">
+                        <input type="text" id="popupName" name="name" placeholder="Full Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="popupPhone" name="phone" placeholder="Mobile Number *" maxlength="10" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="popupEmail" name="email" placeholder="Email Address *" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="popupCourse" name="course" required>
+                            <option value="" disabled>Select Specialization *</option>
+                            <option value="bdes-gdav" selected>B.Des (GDAV) - Graphic Design, Animation, VFX with AI</option>
+                            <option value="bdes-fd">B.Des (FD) - Fashion Design</option>
+                            <option value="bsc-mjmt">B.Sc - Multimedia Journalism & Media Tech with AI</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Inquiry <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
         </div>
     </div>
 
